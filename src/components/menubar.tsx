@@ -10,19 +10,24 @@ import {
 
 import { Button } from "./ui/button"
 import { Moon } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export default function MenuBar(){
 
     return(
-        <div className="p-4 flex flex-col w-full">
+        <div className="pt-4 pb-4 sm:flex flex-col w-full hidden">
             
            <NavigationMenu>
                 <NavigationMenuList>
                     <NavigationMenuItem>
-                        <NavigationMenuLink className="text-base font-medium">Acerca de mi</NavigationMenuLink>
+                            <NavigationMenuLink className="text-base font-medium" asChild>
+                                <Link to="/#about" viewTransition>Acerca de mi</Link>
+                            </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <NavigationMenuLink className="text-base font-medium">Experiencia laboral</NavigationMenuLink>
+                        <NavigationMenuLink className="text-base font-medium" asChild>
+                            <Link to="/#experiences" viewTransition>Experiencia laboral</Link>
+                        </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <NavigationMenuLink className="text-base font-medium">Proyectos</NavigationMenuLink>

@@ -10,14 +10,16 @@ function Init() {
 
 
   return (
-    <div className="flex flex-col w-full items-center align-top justify-center">
-        <div className="w-3/5">
+    <div className=" flex flex-col w-full items-center align-top justify-center">
+        <div className="w-full sm:w-3/5 lg:w-3/5 md:w-3/5">
            <MenuBar />
            <Header/>
-           <About />
-           <Experiencie />
+           <About/>
+           <Experiencie/>
            <Proyects/>
            <Footer/>
+           
+        
         </div>
     </div>
   )

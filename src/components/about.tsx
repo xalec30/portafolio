@@ -1,7 +1,7 @@
 export default function About(){
 
     return(
-        <div className="w-full mt-6 mb-4">
+        <div id="about" className="w-full mt-4 sm:mt-6 mb-4 p-4 sm:p-0">
             <div className="flex flex-col">
                 <div className="w-full border-b-2">
                   <h1 className="text-2xl mb-2 font-medium tracking-wide">Acerca de mi</h1>

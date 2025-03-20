@@ -1,7 +1,8 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "./ui/button"
 import { Github, LinkedinIcon,Mail,Send,Download } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import Profile  from "../assets/img/profile.webp";
 
 export default function Header(){
 
@@ -47,7 +48,7 @@ export default function Header(){
                 <div className="w-full  sm:w-2/5 p-2 min-h-fit flex-col content-center">
                     <div className="w-full flex flex-row justify-center content-center">
                     <Avatar className="w-64 h-64">
-                            <AvatarImage className="w-full" src="https://github.com/shadcn.png" />
+                            <AvatarImage className="w-full" src={Profile} />
                             <AvatarFallback>CN</AvatarFallback>
                         </Avatar>
                     </div>

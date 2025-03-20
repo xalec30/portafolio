@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { Github, LinkedinIcon,Mail,MessageCircle, Heart} from "lucide-react"
+import { Heart} from "lucide-react"
 import { IconReact } from "./svg";
 import { Link } from "react-router-dom";
 import { socialNetwork } from "@/const/socialNetworks";

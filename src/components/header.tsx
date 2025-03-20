@@ -1,11 +1,12 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "./ui/button"
-import { Github, LinkedinIcon,Mail,Send,Download } from "lucide-react"
+import { Download } from "lucide-react"
 import { Link } from "react-router-dom";
 import Profile  from "../assets/img/profile.webp";
+import CV from "../cv/AlexanderRodriguez.pdf"
+import { socialNetwork } from "@/const/socialNetworks";
 
 export default function Header(){
-
     return(
         <header className="mt-4 mb-6 sm:mb-8 w-full h-fit p-4 sm:p-0">
             <div className="flex flex-row min-h-full gap-5 flex-wrap sm:flex-nowrap">
@@ -15,29 +16,17 @@ export default function Header(){
                         <h2 className="text-xl mb-2 font-medium tracking-wide">Desarrollador Fullstack</h2>
                     </div>
                     <div className="flex flex-row gap-1.5">
-                        <Link to="https://github.com/xalec30" target="_blank">
-                            <Button className="rounded-full cursor-pointer" size="icon">
-                                <Github />
-                            </Button>
-                        </Link>
-                        <Link to="https://www.linkedin.com/in/alexrodriguez30/" target="_blank">
-                            <Button className="rounded-full cursor-pointer" size="icon">
-                                <LinkedinIcon/>
-                            </Button>
-                        </Link>
+                    {
+                        socialNetwork.map((social) => (
+                            <Link key={social.name} to={social.url} target="_blank">
+                                <Button className="rounded-full cursor-pointer" size="icon">
+                                    {social.icon}
+                                </Button>
+                            </Link> 
+                        ))
+                    }
 
-                        
-                        <Link to="mailto:xalecr30@gmail.com" target="_blank">
-                            <Button className="rounded-full cursor-pointer" size="icon">
-                                <Mail/>
-                            </Button>
-                        </Link>
-                        <Link to="https://t.me/Alexder30" target="_blank">
-                            <Button className="rounded-full cursor-pointer" size="icon">
-                                <Send/>
-                            </Button>
-                        </Link>
-                        <Link to="../cv/AlexanderRodriguez.pdf" target="_blank" download>
+                        <Link to={CV} target="_blank" download>
                             <Button className="rounded-full cursor-pointer" >
                                 <Download/>
                                 Obtener CV

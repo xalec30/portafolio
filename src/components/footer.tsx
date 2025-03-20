@@ -1,6 +1,8 @@
 import { Button } from "./ui/button";
 import { Github, LinkedinIcon,Mail,MessageCircle, Heart} from "lucide-react"
 import { IconReact } from "./svg";
+import { Link } from "react-router-dom";
+import { socialNetwork } from "@/const/socialNetworks";
 
 export default function Footer(){
 
@@ -15,11 +17,16 @@ export default function Footer(){
                     </p>
                 </div>
                 <div className="w-full sm:min-w-1/2">
-                    <div className="flex-row flex flex-nowrap justify-center sm:justify-end">
-                        <Button variant="link"><Github/></Button>
-                        <Button variant="link"><LinkedinIcon /></Button>
-                        <Button variant="link"><Mail size={36} /></Button>
-                        <Button variant="link"><MessageCircle/></Button>
+                    <div className="flex-row gap-1.5 flex flex-nowrap justify-center sm:justify-end">
+                    {
+                        socialNetwork.map((social) => (
+                            <Link key={social.name} to={social.url} target="_blank">
+                                <Button className="rounded-full cursor-pointer" size="icon">
+                                    {social.icon}
+                                </Button>
+                            </Link> 
+                        ))
+                    }
                     </div>
                 </div>
             </div>

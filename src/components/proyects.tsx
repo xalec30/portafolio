@@ -5,7 +5,7 @@ import { Button } from "./ui/button"
 
 export default function Proyects(){
     return(
-        <div className="w-full mt-10 mb-4 p-4 sm:p-0">
+        <div id="projects" className="w-full mt-10 mb-4 p-4 sm:p-0">
             <div className="flex flex-col">
                 <div className="w-full border-b-2">
                   <h1 className="text-2xl mb-2 font-medium tracking-wide">Proyectos</h1>

@@ -9,10 +9,10 @@ export default function Footer(){
     return(
         <div className="p-4">
             <div className="flex flex-col-reverse sm:flex-row wrap justify-center sm:justify-normal">
-                <div className="w-full sm:w-1/2 pt-2 justify-center sm:justify-normal">
+                <div className="w-full sm:w-1/2 sm:mt-0 mt-5 pt-2 justify-center sm:justify-normal">
                     <p className="font-medium text-sm text-stone-400 text-center sm:text-current">
                         Desarrollado con 
-                        <Heart fill="#e7000b" className="inline" color="#e7000b" /> con  
+                        <Heart fill="#e7000b" className="ml-1 inline" color="#e7000b" /> con  
                         <IconReact className="inline pl-1 pr-1"/>
                     </p>
                 </div>

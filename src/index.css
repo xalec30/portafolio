@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
+
+
 @plugin "tailwindcss-animate";
+
+body {
+  font-family: "Roboto";
+}
 
 @custom-variant dark (&:is(.dark *));
 

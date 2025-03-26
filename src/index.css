@@ -5,7 +5,7 @@
 @plugin "tailwindcss-animate";
 
 body {
-  font-family: "Roboto";
+  font-family: "Poppins";
 }
 
 @custom-variant dark (&:is(.dark *));
